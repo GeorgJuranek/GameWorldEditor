@@ -144,7 +144,18 @@ public sealed class LabyrinthTileBuilder
                 Vector3 newPosition = centerPosition + new Vector3(x, 0, y) * averageSize; ;
                 Quaternion newRotation = Quaternion.Euler(Vector3.up * toCreateRotationInDegree);
 
-                GameObject newRoom = StaticHelper.InstantiateAsPrefabInEditor(roomToCreate, newPosition, newRotation);
+                GameObject newRoom = null;
+
+                if (Application.isPlaying)
+                {
+                    newRoom = StaticHelperRuntime.InstantiateAtRuntime(roomToCreate, newPosition, newRotation);
+                    // Laufzeit: Instanziere GameObject mit normalem Instantiate
+                }
+                else
+                {
+                    // Editor-Modus: Verwende dein Editor-spezifisches Tool
+                    newRoom = StaticHelper.InstantiateAsPrefabInEditor(roomToCreate, newPosition, newRotation);
+                }
 
                 mapInformations[x, y].SetReference(newRoom.transform);
                 mapInformations[x, y].SetPositionInWorld(newRoom.transform.position);

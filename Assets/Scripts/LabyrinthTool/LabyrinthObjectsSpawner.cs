@@ -141,7 +141,20 @@ public class LabyrinthObjectsSpawner
                 {
                     Vector3 newDirection = (mapInformations[newPosition.x, newPosition.y].PositionInWorld - roomGroup[i].PositionInWorld).normalized;
                     Quaternion rotation = Quaternion.LookRotation(newDirection);
-                    StaticHelper.InstantiateAsPrefabInEditor(prefabDoor, roomGroup[i].PositionInWorld, rotation);
+
+
+                    //StaticHelper.InstantiateAsPrefabInEditor(prefabDoor, roomGroup[i].PositionInWorld, rotation);
+                    if (Application.isPlaying)
+                    {
+                        StaticHelperRuntime.InstantiateAtRuntime(prefabDoor, roomGroup[i].PositionInWorld, rotation);
+                        // Laufzeit: Instanziere GameObject mit normalem Instantiate
+                    }
+                    else
+                    {
+                        // Editor-Modus: Verwende dein Editor-spezifisches Tool
+                        StaticHelper.InstantiateAsPrefabInEditor(prefabDoor, roomGroup[i].PositionInWorld, rotation);
+                    }
+
                     break;
                 }
             }
@@ -178,11 +191,36 @@ public class LabyrinthObjectsSpawner
                 {
                     Vector3 randomizedPosition = randomLabtile.PositionInWorld + (Vector3.up * 0.1f) + new Vector3(Random.Range(0, spawnRadiusOnTile / 2), 0f, Random.Range(0, spawnRadiusOnTile / 2));
 
-                    StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+
+
+                    if (Application.isPlaying)
+                    {
+                        //newRoom = StaticHelperRuntime.InstantiateAtRuntime(roomToCreate, newPosition, newRotation);
+                        // Laufzeit: Instanziere GameObject mit normalem Instantiate
+                        StaticHelperRuntime.InstantiateAtRuntime(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+                    }
+                    else
+                    {
+                        // Editor-Modus: Verwende dein Editor-spezifisches Tool
+                        //newRoom = StaticHelper.InstantiateAsPrefabInEditor(roomToCreate, newPosition, newRotation);
+                        StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+                    }
                 }
                 else
                 {
-                    StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomLabtile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    //StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomLabtile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    if (Application.isPlaying)
+                    {
+                        //newRoom = StaticHelperRuntime.InstantiateAtRuntime(roomToCreate, newPosition, newRotation);
+                        // Laufzeit: Instanziere GameObject mit normalem Instantiate
+                        StaticHelperRuntime.InstantiateAtRuntime(Order.prefabs[random], randomLabtile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    }
+                    else
+                    {
+                        // Editor-Modus: Verwende dein Editor-spezifisches Tool
+                        //newRoom = StaticHelper.InstantiateAsPrefabInEditor(roomToCreate, newPosition, newRotation);
+                        StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomLabtile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    }
                 }
 
                 ++count;
@@ -207,11 +245,36 @@ public class LabyrinthObjectsSpawner
                 if (Order.useRandomizedPositionInsideTile)
                 {
                     Vector3 randomizedPosition = specificTile.PositionInWorld + (Vector3.up * 0.1f) + new Vector3(UnityEngine.Random.Range(0, spawnRadiusOnTile / 2), 0f, UnityEngine.Random.Range(0, spawnRadiusOnTile / 2));
-                    StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+                    //StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+                    if (Application.isPlaying)
+                    {
+                        //newRoom = StaticHelperRuntime.InstantiateAtRuntime(roomToCreate, newPosition, newRotation);
+                        // Laufzeit: Instanziere GameObject mit normalem Instantiate
+                        StaticHelperRuntime.InstantiateAtRuntime(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+                    }
+                    else
+                    {
+                        // Editor-Modus: Verwende dein Editor-spezifisches Tool
+                        //newRoom = StaticHelper.InstantiateAsPrefabInEditor(roomToCreate, newPosition, newRotation);
+                        StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], randomizedPosition, Quaternion.identity);
+                    }
                 }
                 else
                 {
-                    StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], specificTile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    //StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], specificTile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+
+                    if (Application.isPlaying)
+                    {
+                        //newRoom = StaticHelperRuntime.InstantiateAtRuntime(roomToCreate, newPosition, newRotation);
+                        // Laufzeit: Instanziere GameObject mit normalem Instantiate
+                        StaticHelperRuntime.InstantiateAtRuntime(Order.prefabs[random], specificTile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    }
+                    else
+                    {
+                        // Editor-Modus: Verwende dein Editor-spezifisches Tool
+                        //newRoom = StaticHelper.InstantiateAsPrefabInEditor(roomToCreate, newPosition, newRotation);
+                        StaticHelper.InstantiateAsPrefabInEditor(Order.prefabs[random], specificTile.PositionInWorld + (Vector3.up * 0.1f), Quaternion.identity);
+                    }
                 }
             }
         }
