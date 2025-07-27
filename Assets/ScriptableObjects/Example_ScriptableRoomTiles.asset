@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc4e8a9ff2464f72954dc3e1e076854, type: 3}
+  m_Name: Example_ScriptableRoomTiles
+  m_EditorClassIdentifier: 
+  averageSize: 10
+  DeadEnd: {fileID: 6554525650013532919, guid: 180b76a46ebde42ee80a3ddb0f3c0e70, type: 3}
+  Line: {fileID: 6554525650013532919, guid: ffd2a0493139942219841977e566a7fa, type: 3}
+  Corner: {fileID: 6554525650013532919, guid: 62037d87338d64faa9793afd454ce9b2, type: 3}
+  Ternary: {fileID: 6554525650013532919, guid: 619c19ebca69e40f6bdc3644a6e1eaf4, type: 3}
+  Crossing: {fileID: 8399207918186891761, guid: a0468ebe14a274586aeebed2516b85eb,
+    type: 3}
+  NavMeshSurface: {fileID: 1647464645375092391, guid: f7371c94237d24c4aa35b47415589e32,
+    type: 3}

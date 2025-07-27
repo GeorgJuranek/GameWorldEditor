@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fbe4e134ba5802489760eb2b90f8bdb, type: 3}
+  m_Name: Example_ScriptableObjectSpawnForRoom
+  m_EditorClassIdentifier: 
+  mainHallwayOrders:
+  - tileTypeToSpawnOn: 6
+    useRandomizedPositionInsideTile: 0
+    minAmount: 1
+    useRandomAmount: 0
+    probability: 0
+    prefabs:
+    - {fileID: 3403523487435209918, guid: a3070839c79ee4fea809754984a28df0, type: 3}
+  - tileTypeToSpawnOn: 3
+    useRandomizedPositionInsideTile: 1
+    minAmount: 0
+    useRandomAmount: 1
+    probability: 0.33
+    prefabs:
+    - {fileID: 3403523487435209918, guid: 752ae4fc7145444b598ff6184dbfae75, type: 3}
+  - tileTypeToSpawnOn: 5
+    useRandomizedPositionInsideTile: 1
+    minAmount: 0
+    useRandomAmount: 1
+    probability: 0.33
+    prefabs:
+    - {fileID: 3403523487435209918, guid: 52140d751c5a948fd8d277a9c072754d, type: 3}
+    - {fileID: 3403523487435209918, guid: 614b41b33409e4595989425be6a790d3, type: 3}
+  doorPrefab: {fileID: 2579161622314028608, guid: 7166e9adb7187438ca3b05372b30a040,
+    type: 3}
+  spawnDiameterPerTile: 0.8
+  furtherRoomOrders:
+  - naming: BossRoom
+    roomColor: {r: 0.16470589, g: 0.12941177, b: 0.12941177, a: 0}
+    minSize: 25
+    npcOrders:
+    - tileTypeToSpawnOn: 5
+      useRandomizedPositionInsideTile: 1
+      minAmount: 1
+      useRandomAmount: 0
+      probability: 1
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 873673e8de9f04833b3fbf0183852a19, type: 3}
+    - tileTypeToSpawnOn: 5
+      useRandomizedPositionInsideTile: 1
+      minAmount: 0
+      useRandomAmount: 1
+      probability: 0.9
+      prefabs:
+      - {fileID: 3403523487435209918, guid: bee20f077a3e14cbd809d7c3d7c1cb87, type: 3}
+      - {fileID: 8820364307343654858, guid: de96f1f9777dd4a1ab8e810b0a2d9577, type: 3}
+      - {fileID: 3403523487435209918, guid: 7cc3e393a3d3548c7817793f5045f68b, type: 3}
+    - tileTypeToSpawnOn: 2
+      useRandomizedPositionInsideTile: 0
+      minAmount: 0
+      useRandomAmount: 1
+      probability: 0.4
+      prefabs:
+      - {fileID: 1077311097942904, guid: 27c627f32d9724193aa3c376ebc3696a, type: 3}
+  - naming: BreakRoom
+    roomColor: {r: 0.29411766, g: 0.37647063, b: 0.28627452, a: 0}
+    minSize: 10
+    npcOrders:
+    - tileTypeToSpawnOn: 2
+      useRandomizedPositionInsideTile: 0
+      minAmount: 0
+      useRandomAmount: 1
+      probability: 0.3
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 98862be5f1255480e8dc0eb4c5fcb5cf, type: 3}
+    - tileTypeToSpawnOn: 5
+      useRandomizedPositionInsideTile: 1
+      minAmount: 0
+      useRandomAmount: 1
+      probability: 0.3
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 1fda6c452af2b4276ad72250fdf1f5cd, type: 3}
+      - {fileID: 3403523487435209918, guid: 908e79dc386a54e7baeca395bb4316fa, type: 3}
+    - tileTypeToSpawnOn: 5
+      useRandomizedPositionInsideTile: 1
+      minAmount: 1
+      useRandomAmount: 0
+      probability: 0
+      prefabs:
+      - {fileID: 1289936835854364, guid: 17e8a31a25e8f4db8a94fc21650ab8f3, type: 3}
+    - tileTypeToSpawnOn: 2
+      useRandomizedPositionInsideTile: 1
+      minAmount: 0
+      useRandomAmount: 1
+      probability: 0.7
+      prefabs:
+      - {fileID: 1862155987202886, guid: 808cd6d6ed6c544cea5f29f5ab693004, type: 3}
+  - naming: YogaRoom
+    roomColor: {r: 0.6431373, g: 0.5176471, b: 0.5176471, a: 0}
+    minSize: 5
+    npcOrders:
+    - tileTypeToSpawnOn: 3
+      useRandomizedPositionInsideTile: 0
+      minAmount: 1
+      useRandomAmount: 0
+      probability: 0
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 5d76ddddb4bef48aa906b6fee4e9fdbc, type: 3}
+    - tileTypeToSpawnOn: 5
+      useRandomizedPositionInsideTile: 0
+      minAmount: 1
+      useRandomAmount: 1
+      probability: 0.4
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 9ac83bfed8e564a28ae033151219457b, type: 3}
+      - {fileID: 3403523487435209918, guid: 629ed24f66b424fcfb33f460fa3d3ebb, type: 3}
+  - naming: StorageRoom
+    roomColor: {r: 0.23137257, g: 0.23137257, b: 0.34117648, a: 0}
+    minSize: 0
+    npcOrders:
+    - tileTypeToSpawnOn: 1
+      useRandomizedPositionInsideTile: 1
+      minAmount: 1
+      useRandomAmount: 0
+      probability: 0
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 5f81dd01e22a14b6aa80374cdaa66b54, type: 3}
+      - {fileID: 3403523487435209918, guid: 8c6bfde47b9334507925d248cb079817, type: 3}
+    - tileTypeToSpawnOn: 1
+      useRandomizedPositionInsideTile: 0
+      minAmount: 0
+      useRandomAmount: 1
+      probability: 0.2
+      prefabs:
+      - {fileID: 3403523487435209918, guid: 0bf0d34dc005642489db0d58629ae651, type: 3}

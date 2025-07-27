@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80825c8d8c2221e42b10b44f4371ec2f, type: 3}
+  m_Name: Example_ScriptableRoomData
+  m_EditorClassIdentifier: 
+  labyrinthWidth: 55
+  labyrinthHeight: 55
+  LabyrinthDensity: 5
+  fixedPoints:
+  - xInPercent: 0
+    yInPercent: 0
+  - xInPercent: 1
+    yInPercent: 0
+  - xInPercent: 0
+    yInPercent: 1

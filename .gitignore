@@ -1,0 +1,107 @@
+#################################
+# Unity: Standardordner ignorieren
+#################################
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+#################################
+# Unity: Projektdateien ignorieren
+#################################
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+#################################
+# Unity: Cache und generierte Dateien
+#################################
+*.unityproj
+*.dll
+*.exe
+*.apk
+*.aab
+*.jar
+*.lib
+*.xcodeproj
+*.xcworkspace
+
+#################################
+# Unity: Ignoriere externe Assets
+#################################
+
+# 3D Modelle
+*.fbx
+*.obj
+*.dae
+*.3ds
+*.blend
+*.max
+
+# Texturen / Sprites / Bilder
+*.png
+*.jpg
+*.jpeg
+*.tga
+*.gif
+*.psd
+*.bmp
+*.tiff
+*.svg
+*.webp
+
+# Sounds / Musik
+*.wav
+*.mp3
+*.ogg
+*.aiff
+*.flac
+
+# Videos
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+#################################
+# macOS-Systemdateien ignorieren
+#################################
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Finder metadata and temp files
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.TemporaryItems
+.apdisk
+.fseventsd
+.hotfiles.btree
+.metadata_never_index
+.MobileBackups
+.DocumentRevisions-V100
+
+#################################
+# Visual Studio / VS Code (optional)
+#################################
+.vs/
+.vscode/
+*.code-workspace
+*.orig
+*.swp
