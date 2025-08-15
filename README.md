@@ -1,4 +1,9 @@
 # Game World Editor/ Engine Tool Demo
+
+| 💡 **Conception** | 🧨 **Timeframe**                   | ⚙️ **Technical Stack** |
+|----------------|---------------------------------|---------------------|
+| Georg Juranek  | 1,5 Month<br>(SAE Sem2)     | `Unity`<br>`Recursive Backtracker`<br>`Labyrinth generation`<br>`Custom Editor Tool`|
+
 ## Office Hell
 
 
@@ -12,6 +17,9 @@ Das System verwendet einen Recursive Backtracker zur Raumerzeugung, ordnet Räum
 Players control a character with the mouse wheel through a procedurally generated office maze. Rooms such as offices, break rooms, or yoga rooms are dynamically created based on their size and equipped with appropriate billboards. 
 The system uses a recursive backtracker to generate rooms, automatically assigns rooms to types, and places objects on defined tiles according to probabilities to create a variable and coherent maze world.
 
+<p>
+  <a href="https://youtu.be/oYTpNDYmQ58" target="_blank" rel="noopener noreferrer">Watch Video</a>
+</p>
 <p>
   <a href="https://georg-juranek.itch.io/office-hell" target="_blank" rel="noopener noreferrer">Play Game</a>
 </p>
